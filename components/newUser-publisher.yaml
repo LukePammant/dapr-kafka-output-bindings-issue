@@ -1,0 +1,13 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: newUser
+spec:
+  type: bindings.kafka
+  metadata:
+  - name: brokers
+    value: localhost:9092
+  - name: publishTopic
+    value: newUser
+  - name: authRequired
+    value: "false"
